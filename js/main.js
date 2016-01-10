@@ -1,5 +1,16 @@
 $(document).on("pagecreate","#mainpage",function(){
-  $("#mainpage").on("click",function(){
+  $("#mainpage").on("tap",function(){
     window.location.href="#cpanelpage";
+  });                       
+});
+$(document).on("pagecreate","#cpanelpage",function(){
+  $(".icon-1").on("tap",function(){
+    alert('1');
+  });                       
+  $(".icon-2").on("tap",function(){
+    alert('2');
+  });                       
+  $(".icon-3").on("tap",function(){
+    alert('3');
   });                       
 });

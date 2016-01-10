@@ -130,7 +130,7 @@ h1 {
 	float:left;
 	width:40%;
 	height:100vh;
-	background: url('../img/21.jpg') no-repeat center center fixed; 
+	background: white url('../img/21.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -139,6 +139,7 @@ h1 {
 .rsidecontainer{
 	float:left;
 	width:60%;
+	background:white;
 }
 .rsidecontainer>.container{
 	width:100%;
