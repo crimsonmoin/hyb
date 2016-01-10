@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
+        id        = "com.phonegap.hybridtab"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Vodafone 4G</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
@@ -21,6 +21,7 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
+	
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
@@ -127,11 +128,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+		  <preference name="phonegap-version" value="4.0.2" />
+		  <preference name="orientation" value="landscape" />
+	</platform>
 
 </widget>
