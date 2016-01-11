@@ -39,16 +39,19 @@ $(document).on("pagecreate","#downloadspage",function(){
   });    
 });
 
-$(document).on("pagecreate","#summarypage",function(){
+$(document).on("pageshow","#summarypage",function(){
 	$("#timer3G").timer();
 	$("#timer4G").timer();
-	$("#timer3G").timer('reset');
-	$("#timer4G").timer('reset');
-	if(typeof(longpollerWorker)!=="undefined"){
+	$("#timer3G").timer('remove');
+	$("#timer4G").timer('remove');
+	console.log(longpollerWorker);
+	console.log(clearWorker);
+	
+	if(typeof(longpollerWorker)!="undefined"){
 		longpollerWorker.terminate();
 		longpollerWorker=undefined;
 	}
-	if(typeof(clearWorker)!=="undefined"){
+	if(typeof(clearWorker)!="undefined"){
 		clearWorker.terminate();
 		clearWorker=undefined;
 	}
