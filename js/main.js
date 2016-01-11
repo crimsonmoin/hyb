@@ -6,13 +6,16 @@ $(document).on("pagecreate","#mainpage",function(){
 $(document).on("pagecreate","#cpanelpage",function(){
   $(".icon-1").on("click",function(e){
 	  e.preventDefault();
+	  console.log('1');
     alert('1');
   });    
   $(".icon-2").on("click",function(e){
+	  console.log('2');
 	  e.preventDefault();
     alert('2');
   });    
   $(".icon-3").on("click",function(e){
+	  console.log('3');
 	  e.preventDefault();
     alert('3');
   });    
