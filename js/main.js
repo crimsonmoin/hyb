@@ -40,7 +40,6 @@ $(document).on("pagecreate","#downloadspage",function(){
 });
 
 $(document).on("pagecreate","#summarypage",function(){
-	$('#timer3G').timer('reset');$('#timer4G').timer('reset');
 	if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
                  var worker = new Worker("js/longpolling.js");
@@ -51,7 +50,7 @@ $(document).on("pagecreate","#summarypage",function(){
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
 						if(data.device1==0&&data.device2==0){
-							$('#timer3G').timer({
+							$("#timer3G").timer({
 							format: '%M:%S'  
 							});
 							$('#timer4G').timer({
@@ -70,12 +69,9 @@ $(document).on("pagecreate","#summarypage",function(){
               }
 			  
 	function clearTimers(){
-		var w;
 		if(typeof(Worker) !== "undefined") {
-			if(typeof(w) == "undefined") {
-				w = new Worker("js/timerclear.js");
-			}
-			w.onmessage = function(event) {
+				var w1 = new Worker("js/timerclear.js");
+			w1.onmessage = function(event) {
 			 alert('started');
 			};
 		} else {
