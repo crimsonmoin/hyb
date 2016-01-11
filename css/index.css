@@ -82,8 +82,8 @@ body {
     }
 }
 
-h1,p {
-    font-size:24px;
+h1 {
+    font-size:40px;
     font-weight:normal;
     margin:0px;
     overflow:visible;
@@ -134,7 +134,7 @@ h1,p {
   -o-background-size: cover;
   background-size: cover;
 }
-#cpanelpage{
+#cpanelpage,#downloadspage{
 	background:white;
 }
 .lsidecontainer{
