@@ -187,3 +187,7 @@ h1 {
 	background:transparent;
 	padding:20px;
 }
+#timer3G,#timer4G{
+	padding-top:20%;
+	font-size:100px;
+}

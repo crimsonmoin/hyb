@@ -40,6 +40,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 });
 
 $(document).on("pagecreate","#summarypage",function(){
+	$('#timer3G').timer('reset');$('#timer4G').timer('reset');
 	if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
                  var worker = new Worker("js/longpolling.js");
@@ -50,7 +51,6 @@ $(document).on("pagecreate","#summarypage",function(){
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
 						if(data.device1==0&&data.device2==0){
-							$('#timer3G').timer('remove');$('#timer4G').timer('remove');
 							$('#timer3G').timer({
 							format: '%M:%S'  
 							});
