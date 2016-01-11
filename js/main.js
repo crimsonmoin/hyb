@@ -4,13 +4,16 @@ $(document).on("pagecreate","#mainpage",function(){
   });    
 });
 $(document).on("pagecreate","#cpanelpage",function(){
-  $(".icon-1").on("click",function(){
+  $(".icon-1").on("click",function(e){
+	  e.preventDefault();
     alert('1');
   });    
-  $(".icon-2").on("click",function(){
+  $(".icon-2").on("click",function(e){
+	  e.preventDefault();
     alert('2');
   });    
-  $(".icon-3").on("click",function(){
+  $(".icon-3").on("click",function(e){
+	  e.preventDefault();
     alert('3');
   });    
 });
