@@ -4,6 +4,10 @@ $(document).on("pagecreate","#mainpage",function(){
   });    
 });
 $(document).on("pagecreate","#cpanelpage",function(){
+	alert();
+	$("button").on("tap",function(){
+		alert('works');
+	});
   $(".icon-1").on("click",function(e){
 	  e.preventDefault();
 	  console.log('1');
