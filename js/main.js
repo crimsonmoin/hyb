@@ -52,17 +52,17 @@ $(document).on("pagecreate","#downloadspage",function(){
 		   // document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
 		}
 	};
-	$(".icon-1").on("click",function(e){
+	$(".icon-11").on("click",function(e){
 	  e.preventDefault();
 	  console.log('1');
 	  clearTimers();
   });    
-  $(".icon-2").on("click",function(e){
+  $(".icon-21").on("click",function(e){
 	  console.log('2');
 	  e.preventDefault();
 	  clearTimers();
   });    
-  $(".icon-3").on("click",function(e){
+  $(".icon-31").on("click",function(e){
 	  console.log('3');
 	  e.preventDefault();
 	  clearTimers();
