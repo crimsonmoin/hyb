@@ -196,7 +196,7 @@ h1 {
 	clear:both;
 }
 .back{
-	position:absolute;
+	position:fixed;
 	bottom:50px;
-	left:40px;
+	left:45%;
 }
