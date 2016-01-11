@@ -18,8 +18,11 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	margin:0;padding:0;
 }
-
+html, body {
+    height:100%;
+}
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -112,4 +115,48 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+#mainpage{
+	background: url('../img/1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#cpanelpage{
+	background:white;
+}
+.lsidecontainer{
+	float:left;
+	width:40%;
+	height:100vh;
+	background: url('../img/21.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.rsidecontainer{
+	float:left;
+	width:60%;
+}
+.rsidecontainer>.container{
+	width:100%;
+	height:50vh;
+}
+.col3{
+	width: 28%;
+    float: left;
+    margin: 20px;
+}
+.col3 img{
+	width:100%;
+	height:100%;
+	padding:20px;
+}
+.icon{
+	width:100%;
+	height:100vh;
+	background:transparent;
+	padding:20px;
 }

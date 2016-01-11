@@ -1,16 +1,16 @@
 $(document).on("pagecreate","#mainpage",function(){
-  $("#mainpage").on("tap",function(){
+  $("#mainpage").on("click",function(){
     window.location.href="#cpanelpage";
-  });                       
+  });    
 });
 $(document).on("pagecreate","#cpanelpage",function(){
-  $(".icon-1").on("tap",function(){
+  $(".icon-1").on("click",function(){
     alert('1');
-  });                       
-  $(".icon-2").on("tap",function(){
+  });    
+  $(".icon-2").on("click",function(){
     alert('2');
-  });                       
-  $(".icon-3").on("tap",function(){
+  });    
+  $(".icon-3").on("click",function(){
     alert('3');
-  });                       
+  });    
 });
