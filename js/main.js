@@ -1,11 +1,11 @@
+var clearWorker;
+var longpollerWorker;
 $(document).on("pagecreate","#mainpage",function(){
   $("#mainpage").on("click",function(){
     window.location.href="#cpanelpage";
   });    
 });
-$(document).on("pagecreate","#cpanelpage",function(){
-			  
-	/***************************************************/
+$(document).on("pagecreate","#cpanelpage",function(){			  
   $(".icon-1").on("click",function(e){
 	  e.preventDefault();
 	  console.log('1');
@@ -40,13 +40,25 @@ $(document).on("pagecreate","#downloadspage",function(){
 });
 
 $(document).on("pagecreate","#summarypage",function(){
+	$("#timer3G").timer();
+	$("#timer4G").timer();
+	$("#timer3G").timer('reset');
+	$("#timer4G").timer('reset');
+	if(typeof(longpollerWorker)!=="undefined"){
+		longpollerWorker.terminate();
+		longpollerWorker=undefined;
+	}
+	if(typeof(clearWorker)!=="undefined"){
+		clearWorker.terminate();
+		clearWorker=undefined;
+	}
 	if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
-                 var worker = new Worker("js/longpolling.js");
+                 longpollerWorker = new Worker("js/longpolling.js");
                  //Call Back Function for Success
-                 worker.onmessage = workerResultReceiver;
+                 longpollerWorker.onmessage = workerResultReceiver;
                  //Call Back function if some error occurred
-                 worker.onerror = workerErrorReceiver;    
+                 longpollerWorker.onerror = workerErrorReceiver;    
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
 						if(data.device1==0&&data.device2==0){
@@ -70,12 +82,10 @@ $(document).on("pagecreate","#summarypage",function(){
 			  
 	function clearTimers(){
 		if(typeof(Worker) !== "undefined") {
-				var w1 = new Worker("js/timerclear.js");
-			w1.onmessage = function(event) {
+			clearWorker = new Worker("js/timerclear.js");
+			clearWorker.onmessage = function(event) {
 			 alert('started');
 			};
-		} else {
-		   // document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
 		}
 	};
 	clearTimers();	
