@@ -88,6 +88,7 @@ $(document).on("pageshow","#summarypage",function(){
 	$("#timer4G").timer();
 	$("#timer3G").timer('remove');
 	$("#timer4G").timer('remove');
+	$(".back").hide();
 	console.log(longpollerWorker);
 	console.log(clearWorker);
 	
@@ -108,7 +109,9 @@ $(document).on("pageshow","#summarypage",function(){
                  longpollerWorker.onerror = workerErrorReceiver;    
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
+					 if(data.device1==1&&data.device2==1){$(".back").show();}
 						if(data.device1==0&&data.device2==0){
+							$(".back").hide();
 							$("#timer3G").timer({
 							format: '%M:%S'  
 							});
