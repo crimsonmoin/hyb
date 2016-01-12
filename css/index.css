@@ -191,7 +191,7 @@ h1 {
 	text-align:left;
 	font-size:100px;
 	font-family: 'vodafonebold';
-	text-transform: capitalize;
+	text-transform: none;
 	margin-top:15%;
 	margin-left:15%;
 }
