@@ -35,9 +35,9 @@ $(document).on("pagecreate","#downloadspage",function(){
 	$(".ppt").show();
 	$(".icon-11").on("click",function(e){
 	  e.preventDefault();
-	  $(".image").fadeTo("fast",0.5);
-	  $(".video").fadeTo("fast",0.5);
-	  $(".ppt").fadeTo("fast",1);
+	  $(".icon-21").fadeTo("fast",0.5);
+	  $(".icon-31").fadeTo("fast",0.5);
+	  $(".icon-11").fadeTo("fast",1);
 	  $(".ppt").show();
 	  $(".image").hide();
 	  $(".video").hide();
@@ -46,9 +46,9 @@ $(document).on("pagecreate","#downloadspage",function(){
   $(".icon-21").on("click",function(e){
 	  console.log('2');
 	  e.preventDefault();
-	  $(".ppt").fadeTo("fast",0.5);
-	  $(".video").fadeTo("fast",0.5);
-	  $(".image").fadeTo("fast",1);
+	  $(".icon-11").fadeTo("fast",0.5);
+	  $(".icon-31").fadeTo("fast",0.5);
+	  $(".icon-21").fadeTo("fast",1);
 	  $(".image").show();
 	  $(".ppt").hide();
 	  $(".video").hide();
@@ -56,9 +56,9 @@ $(document).on("pagecreate","#downloadspage",function(){
   $(".icon-31").on("click",function(e){
 	  console.log('3');
 	  e.preventDefault();
-	  $(".ppt").fadeTo("fast",0.5);
-	  $(".image").fadeTo("fast",0.5);
-	  $(".video").fadeTo("fast",1);
+	  $(".icon-11").fadeTo("fast",0.5);
+	  $(".icon-21").fadeTo("fast",0.5);
+	  $(".icon-31").fadeTo("fast",1);
 	  $(".video").show();
 	  $(".ppt").hide();
 	  $(".image").hide();
