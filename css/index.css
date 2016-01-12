@@ -164,7 +164,7 @@ h1 {
 }
 #cpanelpage h1{
 	text-transform: none;
-	text-align:center;
+	text-align:left;
 	color:rgb(129,130,133);
 	font-family: 'vodaofoneregular';
 	font-size:100px;
