@@ -3,6 +3,7 @@ self.addEventListener("message", function(e) {
   id = e.data;
 }, false);
 function loadDoc() {
+	alert(id);
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
