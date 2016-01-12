@@ -1,5 +1,13 @@
 var clearWorker;
 var longpollerWorker;
+var id=0;
+$(document).on("pagecreate","#connectpage",function(){
+  $("button").on("click",function(){
+	  id=$("#txtid").val();
+	  if(id==""){alert('Please enter store id.');}
+	  else{window.location.href="#mainpage";}
+  });    
+});
 $(document).on("pagecreate","#mainpage",function(){
   $("#mainpage").on("click",function(){
     window.location.href="#cpanelpage";
