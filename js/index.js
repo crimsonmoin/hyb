@@ -34,9 +34,12 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         console.log('ready');
+		document.addEventListener("backbutton", function (e) {
+		e.preventDefault();
+		}, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-    
+		
     }
 };
