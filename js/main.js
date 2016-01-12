@@ -30,20 +30,38 @@ $(document).on("pagecreate","#cpanelpage",function(){
 });
 
 $(document).on("pagecreate","#downloadspage",function(){
+	$(".image").hide();
+	$(".video").hide();
+	$(".ppt").show();
 	$(".icon-11").on("click",function(e){
 	  e.preventDefault();
-	  console.log('1');
-	  window.location.href="#summarypage";
+	  $(".image").fadeTo("fast",0.5);
+	  $(".video").fadeTo("fast",0.5);
+	  $(".ppt").fadeTo("fast",1);
+	  $(".ppt").show();
+	  $(".image").hide();
+	  $(".video").hide();
+	  //window.location.href="#summarypage";
   });    
   $(".icon-21").on("click",function(e){
 	  console.log('2');
 	  e.preventDefault();
-	  window.location.href="#summarypage";
+	  $(".ppt").fadeTo("fast",0.5);
+	  $(".video").fadeTo("fast",0.5);
+	  $(".image").fadeTo("fast",1);
+	  $(".image").show();
+	  $(".ppt").hide();
+	  $(".video").hide();
   });    
   $(".icon-31").on("click",function(e){
 	  console.log('3');
 	  e.preventDefault();
-	  window.location.href="#summarypage";
+	  $(".ppt").fadeTo("fast",0.5);
+	  $(".image").fadeTo("fast",0.5);
+	  $(".video").fadeTo("fast",1);
+	  $(".video").show();
+	  $(".ppt").hide();
+	  $(".image").hide();
   });    
 });
 
