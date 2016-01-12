@@ -67,7 +67,7 @@ body {
 	font-family: 'vodaofoneregular';
 	font-size:50px;
 }
-#connectpage input,#connectpage button{
+#connectpage label,#connectpage input,#connectpage button{
 	font-family: 'vodaofoneregular';
 	font-size:50px;
 }
