@@ -84,23 +84,36 @@ $(document).on("pagecreate","#downloadspage",function(){
 });
 
 $(document).on("pageshow","#summarypage",function(){
-	$("#timer3G").timer();
+	/*$("#timer3G").timer();
 	$("#timer4G").timer();
 	$("#timer3G").timer('remove');
-	$("#timer4G").timer('remove');
+	$("#timer4G").timer('remove');*/
 	$(".back").hide();
-	console.log(longpollerWorker);
-	console.log(clearWorker);
-	
-	if(typeof(longpollerWorker)!="undefined"){
-		longpollerWorker.terminate();
-		longpollerWorker=undefined;
-	}
+							$("#timer3G").timer({
+							format: '%M:%S'  
+							});
+							$('#timer4G').timer({
+							format: '%M:%S'  
+							});
 	if(typeof(clearWorker)!="undefined"){
 		clearWorker.terminate();
 		clearWorker=undefined;
 	}
-	if (typeof (Worker) !== "undefined") {
+	function clearTimers(){
+		if(typeof(Worker) !== "undefined") {
+			clearWorker = new Worker("js/timerclear.js");
+			clearWorker.onmessage = function(event) {
+			 console.log('started');
+			};
+		}
+	};
+	clearTimers();	
+	if(typeof(longpollerWorker)!="undefined"){
+		longpollerWorker.terminate();
+		longpollerWorker=undefined;
+	}
+	function longPoller(){
+		if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
                  longpollerWorker = new Worker("js/longpolling.js");
                  //Call Back Function for Success
@@ -110,7 +123,7 @@ $(document).on("pageshow","#summarypage",function(){
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
 					 if(data.device1==1&&data.device2==1){$(".back").show();}
-						if(data.device1==0&&data.device2==0){
+						/*if(data.device1==0&&data.device2==0){
 							$(".back").hide();
 							$("#timer3G").timer({
 							format: '%M:%S'  
@@ -118,7 +131,7 @@ $(document).on("pageshow","#summarypage",function(){
 							$('#timer4G').timer({
 							format: '%M:%S'  
 							});
-						}
+						}*/
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
                  }
@@ -129,14 +142,6 @@ $(document).on("pageshow","#summarypage",function(){
               else {
                   alert("Sorry!!! could not connect");
               }
-			  
-	function clearTimers(){
-		if(typeof(Worker) !== "undefined") {
-			clearWorker = new Worker("js/timerclear.js");
-			clearWorker.onmessage = function(event) {
-			 console.log('started');
-			};
-		}
 	};
-	clearTimers();	
+	longPoller();
 });
