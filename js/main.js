@@ -1,5 +1,6 @@
 var clearWorker;
 var longpollerWorker;
+var operation="";
 var id=0;
 $(document).on("pagecreate","#connectpage",function(){
   $("button").on("click",function(){
@@ -64,6 +65,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".image").hide();
   });
   $(".thumper a").click(function(){
+	  operation=$(this).attr("title");
 	  var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -76,7 +78,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 					}
 			}
 		  };
-		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+$(this).attr("title"), true);
+		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+operation, true);
 		  xhttp.send();
 	});
 });
