@@ -266,10 +266,10 @@ h1 {
 	text-align:center;
 }
 .circle{
-	padding-top:15%;
+	padding-top:150;
 	text-align:center;
 	border-radius:50%;
 	border:5px solid rgb(233,0,0);
-	width:400px;
-	height:400px;
+	width:500px;
+	height:500px;
 }
