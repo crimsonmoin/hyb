@@ -113,6 +113,7 @@ $(document).on("pageshow","#summarypage",function(){
 		if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
                  longpollerWorker = new Worker("js/longpolling.js");
+				 longpollerWorker.postMessage(id);
                  //Call Back Function for Success
                  longpollerWorker.onmessage = workerResultReceiver;
                  //Call Back function if some error occurred
