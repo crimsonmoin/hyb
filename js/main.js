@@ -20,6 +20,7 @@ $(document).on("pagecreate","#connectpage",function(){
 			localStorage.id=id;
 			window.location.href="#mainpage";
 			}
+		else{alert('local storage not supported');}
 		}
   });    
 });
