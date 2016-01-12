@@ -241,5 +241,11 @@ h1 {
 	max-width:70%;
 }
 .thumper{
-	border-top: 5px solid #eee;
+	border-top: 10px solid rgb(129,130,133);
+}
+.thumper h1{
+	text-align:center;
+	color:rgb(129,130,133);
+	font-family: 'vodaofoneregular';
+	font-size:80px;
 }
