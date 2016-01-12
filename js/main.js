@@ -41,7 +41,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".ppt").show();
 	  $(".image").hide();
 	  $(".video").hide();
-	  //window.location.href="#summarypage";
+	 
   });    
   $(".icon-21").on("click",function(e){
 	  console.log('2');
@@ -62,7 +62,11 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".video").show();
 	  $(".ppt").hide();
 	  $(".image").hide();
-  });    
+  });
+  $(".thumper a").click(function(){
+	  alert($(this).attr("title"));
+	  //window.location.href="#summarypage"; 
+  });
 });
 
 $(document).on("pageshow","#summarypage",function(){
