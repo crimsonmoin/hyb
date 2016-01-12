@@ -94,11 +94,11 @@ $(document).on("pagecreate","#downloadspage",function(){
 });
 
 $(document).on("pageshow","#summarypage",function(){
-	/*$("#timer3G").timer();
+	$("#timer3G").timer();
 	$("#timer4G").timer();
 	$("#timer3G").timer('remove');
-	$("#timer4G").timer('remove');*/
-	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size :"+MasterData[op].size);
+	$("#timer4G").timer('remove');
+	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size : "+MasterData[op].size);
 	$(".back").hide();
 							$("#timer3G").timer({
 							format: '%M:%S'  
