@@ -243,9 +243,6 @@ h1 {
 .disabler{
 	opacity:0.5;
 }
-.thumper{
-	border-top: 10px solid rgb(129,130,133);
-}
 .thumper a{
 	text-decoration:none;
 }
