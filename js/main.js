@@ -2,6 +2,15 @@ var clearWorker;
 var longpollerWorker;
 var operation="";
 var id=0;
+var MasterData=[
+{'type':'PPT','size':'4mb','op':'upload'},
+{'type':'PPT','size':'2mb','op':'upload'},
+{'type':'Image','size':'21mb','op':'download'},
+{'type':'Image','size':'12mb','op':'download'},
+{'type':'Video','size':'17mb','op':'download'},
+{'type':'Video','size':'2mb','op':'download'},
+];
+var op=0;
 $(document).on("pagecreate","#connectpage",function(){
   $("button").on("click",function(){
 	  id=$("#txtid").val();
@@ -65,6 +74,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".image").hide();
   });
   $(".thumper a").click(function(){
+	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
 	  var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
@@ -88,6 +98,7 @@ $(document).on("pageshow","#summarypage",function(){
 	$("#timer4G").timer();
 	$("#timer3G").timer('remove');
 	$("#timer4G").timer('remove');*/
+	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size :"+MasterData[op].size);
 	$(".back").hide();
 							$("#timer3G").timer({
 							format: '%M:%S'  
