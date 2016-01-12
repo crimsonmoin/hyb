@@ -188,6 +188,8 @@ h1 {
 }
 #downloadspage .lsidecontainer h1{
 	color:white;
+	text-align:left;
+	font-size:100px;
 	font-family: 'vodafonebold';
 	text-transform: capitalize;
 	margin-top:15%;
