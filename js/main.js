@@ -75,9 +75,9 @@ $(document).on("pagecreate","#downloadspage",function(){
 					}
 			}
 		  };
-		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="$(this).attr("title"), true);
+		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+$(this).attr("title"), true);
 		  xhttp.send();
-  });
+	});
 });
 
 $(document).on("pageshow","#summarypage",function(){
