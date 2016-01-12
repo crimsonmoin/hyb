@@ -62,7 +62,7 @@ body {
     text-transform:normal;
     width:100%;
 }
-
+a{text-decoration:none;}
 #connectpage{
 	font-family: 'vodaofoneregular';
 	font-size:50px;
@@ -245,6 +245,9 @@ h1 {
 }
 .thumper{
 	border-top: 10px solid rgb(129,130,133);
+}
+.thumper a{
+	text-decoration:none;
 }
 .thumper h1{
 	text-align:center;
