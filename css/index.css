@@ -185,6 +185,8 @@ h1 {
 	text-transform: capitalize;
 	margin-top:40%;
 	margin-left:15%;
+	text-align:left;
+	font-size:90px;
 }
 #downloadspage .lsidecontainer h1{
 	color:white;
@@ -197,6 +199,8 @@ h1 {
 }
 #summarypage .lsidecontainer h1{
 	color:white;
+	text-align:left;
+	font-size:90px;
 	font-family: 'vodafonebold';
 	text-transform: capitalize;
 	margin-top:30%;
