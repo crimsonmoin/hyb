@@ -169,6 +169,12 @@ h1 {
 	font-family: 'vodaofoneregular';
 	font-size:100px;
 }
+#cpanelpage>.lsidecontainer h1{
+	color:white;
+	font-family: 'vodafonebold';
+	text-transform: capitalize;
+	margin-top:40%;
+}
 .col3{
 	width: 28%;
     float: left;
