@@ -15,7 +15,12 @@ $(document).on("pagecreate","#connectpage",function(){
   $("button").on("click",function(){
 	  id=$("#txtid").val();
 	  if(id==""){alert('Please enter store id.');}
-	  else{window.location.href="#mainpage";}
+	  else{
+		 if(typeof(Storage) !== "undefined") {
+			localStorage.id=id;
+			window.location.href="#mainpage";
+			}
+		}
   });    
 });
 $(document).on("pagecreate","#mainpage",function(){
@@ -113,7 +118,6 @@ $(document).on("pageshow","#summarypage",function(){
 		if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
                  longpollerWorker = new Worker("js/longpolling.js");
-				 longpollerWorker.postMessage(id);
                  //Call Back Function for Success
                  longpollerWorker.onmessage = workerResultReceiver;
                  //Call Back function if some error occurred
