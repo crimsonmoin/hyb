@@ -177,7 +177,7 @@ h1 {
 	text-align:left;
 	color:rgb(129,130,133);
 	font-family: 'vodaofoneregular';
-	font-size:100px;
+	font-size:90px;
 }
 #cpanelpage .lsidecontainer h1{
 	color:white;
@@ -189,11 +189,11 @@ h1 {
 #downloadspage .lsidecontainer h1{
 	color:white;
 	text-align:left;
-	font-size:100px;
+	font-size:90px;
 	font-family: 'vodafonebold';
 	text-transform: none;
 	margin-top:15%;
-	margin-left:15%;
+	margin-left:5%;
 }
 
 .col3{
