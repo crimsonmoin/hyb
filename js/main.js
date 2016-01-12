@@ -67,12 +67,13 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-					if(xhttp.responseText==1||xhttp.responseText=="1"){
+			alert(xhttp.responseText);
+					/*if(xhttp.responseText==1||xhttp.responseText=="1"){
 						window.location.href="#summarypage"; 
 					}
 					else{
 						alert('Failed to connect');
-					}
+					}*/
 			}
 		  };
 		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+$(this).attr("title"), true);
