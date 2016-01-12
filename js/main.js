@@ -64,8 +64,19 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".image").hide();
   });
   $(".thumper a").click(function(){
-	  alert($(this).attr("title"));
-	  //window.location.href="#summarypage"; 
+	  var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+					if(xhttp.responseText==1||xhttp.responseText=="1"){
+						window.location.href="#summarypage"; 
+					}
+					else{
+						alert('Failed to connect');
+					}
+			}
+		  };
+		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="$(this).attr("title"), true);
+		  xhttp.send();
   });
 });
 
@@ -110,14 +121,14 @@ $(document).on("pageshow","#summarypage",function(){
                  }
               }
               else {
-                  alert("Sorry!!! Worker Not Supported in Your Browser");
+                  alert("Sorry!!! could not connect");
               }
 			  
 	function clearTimers(){
 		if(typeof(Worker) !== "undefined") {
 			clearWorker = new Worker("js/timerclear.js");
 			clearWorker.onmessage = function(event) {
-			 alert('started');
+			 console.log('started');
 			};
 		}
 	};
