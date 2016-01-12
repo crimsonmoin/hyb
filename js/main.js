@@ -76,7 +76,7 @@ $(document).on("pagecreate","#downloadspage",function(){
   $(".thumper a").click(function(){
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
-	  var xhttp = new XMLHttpRequest();
+	  /*var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 				var data=JSON.parse(xhttp.responseText);
@@ -89,7 +89,8 @@ $(document).on("pagecreate","#downloadspage",function(){
 			}
 		  };
 		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+operation, true);
-		  xhttp.send();
+		  xhttp.send();*/
+		  window.location.href="#summarypage"; 
 	});
 });
 
@@ -100,25 +101,10 @@ $(document).on("pageshow","#summarypage",function(){
 	$("#timer4G").timer('remove');
 	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size : "+MasterData[op].size);
 	$(".back").hide();
-							$("#timer3G").timer({
-							format: '%M:%S'  
-							});
-							$('#timer4G').timer({
-							format: '%M:%S'  
-							});
-	if(typeof(clearWorker)!="undefined"){
+	/*if(typeof(clearWorker)!="undefined"){
 		clearWorker.terminate();
 		clearWorker=undefined;
-	}
-	function clearTimers(){
-		if(typeof(Worker) !== "undefined") {
-			clearWorker = new Worker("js/timerclear.js");
-			clearWorker.onmessage = function(event) {
-			 console.log('started');
-			};
-		}
-	};
-	clearTimers();	
+	}*/
 	if(typeof(longpollerWorker)!="undefined"){
 		longpollerWorker.terminate();
 		longpollerWorker=undefined;
@@ -154,5 +140,29 @@ $(document).on("pageshow","#summarypage",function(){
                   alert("Sorry!!! could not connect");
               }
 	};
-	longPoller();
+	function clearTimers(){
+		/*if(typeof(Worker) !== "undefined") {
+			clearWorker = new Worker("js/timerclear.js");
+			clearWorker.onmessage = function(event) {
+			 console.log('started');
+			};
+		}*/
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			var res=JSON.parse(xhttp.responseText);
+			if(res.status==1){
+				$("#timer3G").timer({format: '%M:%S' });
+				$("#timer4G").timer({format: '%M:%S' });
+				longPoller();
+			}
+			else{
+				alert('Failed to trigger operation');
+			}
+		}
+	};
+	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
+	xhttp.send();
+	};
+	clearTimers();	
 });
