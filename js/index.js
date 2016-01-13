@@ -37,6 +37,17 @@ var app = {
 		document.addEventListener("backbutton", function (e) {
 		e.preventDefault();
 		}, false);
+		if(navigator.connection.type==0)
+		{
+			alert('No internet connection detected');
+			navigator.app.exitApp();
+
+		}
+		else if(navigator.connection.type=='none')
+		{
+			alert('No internet connection detected');
+			navigator.app.exitApp();
+		}
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
