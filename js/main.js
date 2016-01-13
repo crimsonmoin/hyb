@@ -115,6 +115,13 @@ $(document).on("pagecreate","#youtubepage",function(){
 	  window.location.href="#summarypage"; 
 	});
 });
+$(document).on("pagecreate","#apppage",function(){
+	$(".appdetail button").click(function(){
+	  op=parseInt($(this).attr("data-op"));
+	  operation=$(this).attr("title");
+	  window.location.href="#summarypage"; 
+	});
+});
 $(document).on("pageshow","#summarypage",function(){
 	$("#timer3G").timer();
 	$("#timer4G").timer();
