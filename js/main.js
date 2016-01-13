@@ -118,8 +118,8 @@ $(document).on("pagecreate","#youtubepage",function(){
 	});
 });
 $(document).on("pagecreate","#apppage",function(){
-	$(".appdetail button").click(function(e){
-		e.preventDefault();
+	$(".appdetail a").click(function(e){
+	  e.preventDefault();
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
 	  window.location.href="#summarypage"; 
