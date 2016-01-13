@@ -164,9 +164,6 @@ $(document).on("pageshow","#summarypage",function(){
 				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
 			}
-			else{
-				alert('Failed to trigger operation');
-			}
 		}
 		else{alert('Failed to trigger operation');}
 	};
