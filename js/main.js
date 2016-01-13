@@ -45,13 +45,12 @@ $(document).on("pagecreate","#cpanelpage",function(){
 	  window.location.href="#youtubepage";
   });    
   $(".icon-2").on("click",function(e){
-	  console.log('2');
 	  e.preventDefault();
 	  window.location.href="#downloadspage";
   });    
   $(".icon-3").on("click",function(e){
-	  console.log('3');
 	  e.preventDefault();
+	  window.location.href="#apppage";
   });    
 });
 
@@ -109,7 +108,13 @@ $(document).on("pagecreate","#downloadspage",function(){
 		  window.location.href="#summarypage"; 
 	});
 });
-
+$(document).on("pagecreate","#youtubepage",function(){
+	$(".thumper a").click(function(){
+	  op=parseInt($(this).attr("data-op"));
+	  operation=$(this).attr("title");
+	  window.location.href="#summarypage"; 
+	});
+});
 $(document).on("pageshow","#summarypage",function(){
 	$("#timer3G").timer();
 	$("#timer4G").timer();

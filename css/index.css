@@ -184,21 +184,12 @@ h1 {
 	margin-top:10%;
 	margin-left:5%;
 }
-#summarypage .lsidecontainer h1{
+#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1{
 	color:white;
 	text-align:left;
 	font-size:90px;
 	font-family: 'vodafonebold';
 	text-transform: capitalize;
-	margin-top:30%;
-	margin-left:10%;
-}
-#youtubepage .lsidecontainer h1{
-	color:white;
-	text-align:left;
-	font-size:90px;
-	font-family: 'vodafonebold';
-	text-transform: normal;
 	margin-top:30%;
 	margin-left:10%;
 }
