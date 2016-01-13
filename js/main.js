@@ -159,7 +159,7 @@ $(document).on("pageshow","#summarypage",function(){
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			var res=JSON.parse(xhttp.responseText);
-			if(res.status=="Success"){
+			if(res.status=="Success"&&res.device1==0&&res.device2==0){
 				$("#timer3G").timer({format: '%M:%S' });
 				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
@@ -168,6 +168,7 @@ $(document).on("pageshow","#summarypage",function(){
 				alert('Failed to trigger operation');
 			}
 		}
+		else{alert('Failed to trigger operation');}
 	};
 	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
 	xhttp.send();
