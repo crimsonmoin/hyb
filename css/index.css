@@ -249,6 +249,11 @@ h1 {
 .disabler{
 	opacity:0.5;
 }
+.thumper{
+	float:left;
+	width:100%;
+	border-top:2px solid #eee;
+}
 .thumper a{
 	text-decoration:none;
 }
