@@ -197,7 +197,7 @@ h1 {
 	text-align:left;
 	font-size:90px;
 	font-family: 'vodafonebold';
-	text-transform: capitalize;
+	text-transform: normal;
 	margin-top:30%;
 	margin-left:10%;
 }
@@ -305,7 +305,7 @@ h1 {
 .appdetail{
 	float:left;
 	width:60%;
-	padding:40px;
+	padding-top:20px;
 }
 .appicon>img{
 	height:200px;
@@ -318,9 +318,11 @@ h1 {
 .appdetail button{
 	position:absolute;
 	right:40px;
-	bottom:40px;
+	bottom:10px;
 	font-size:30px;
 	font-family:'robotolight';
-	background:#689F38;
+}
+.appdetail .ui-btn{
+	background-color:#689F38;
 	color:white;
 }
