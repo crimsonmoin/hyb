@@ -282,3 +282,19 @@ h1 {
 	width:500px;
 	height:500px;
 }
+.appblk{
+	background:white;
+	border-radius:2px;
+	margin:40px;
+	float:left;
+	width:100%;
+}
+.appicon{
+	float:left;
+	width:30%;
+}
+.appdetail{
+	float:left;
+	width:70%;
+	padding:40px;
+}
