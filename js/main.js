@@ -22,14 +22,14 @@ $(document).on("pagecreate","#connectpage",function(){
 	  id=$("#txtid").val();
 	  if(id==""){alert('Please enter store id.');}
 	  else{
-		  var xhttp = new XMLHttpRequest();
+			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
-			if (xhttp.readyState == 4 && xhttp.status == 200) {
-				window.location.href="#mainpage";
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					window.location.href="#mainpage";
+				}
+				if(xhttp.status == 204){alert('Store id is invalid');}
 			}
-			if(xhttp.status == 204){alert('Store id is invalid');}
-		};
-		xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=GetTime&id="+d, true);
+		xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=GetTime&id="+id, true);
 		xhttp.send();
 		}
   });    
