@@ -303,8 +303,9 @@ h1 {
 }
 .appdetail{
 	float:left;
-	width:70%;
+	width:60%;
 	padding:40px;
+	position:relative;
 }
 .appicon>img{
 	height:250px;
@@ -312,5 +313,10 @@ h1 {
 }
 .appdetail h2{
 	font-family:'roboto';
-	font-size:80px;
+	font-size:60px;
+}
+.appdetail button{
+	position:absolute;
+	right:40px;
+	bottom:40px;
 }
