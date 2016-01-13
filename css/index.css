@@ -42,19 +42,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    background-color:white;
     font-size:12px;
     height:100%;
     margin:0px;
@@ -147,9 +135,6 @@ h1 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-#cpanelpage,#downloadspage,#summarypage{
-	background:white;
 }
 .lsidecontainer{
 	float:left;
@@ -285,6 +270,8 @@ h1 {
 }
 #youtubepage .rsidecontainer>.container{
 	border-bottom:2px solid #eee;
+	text-align:center;
+	margin-top:20%;
 }
 #summarypage .rsidecontainer>.container .col2{
 	text-align:center;
