@@ -159,7 +159,7 @@ $(document).on("pageshow","#summarypage",function(){
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			var res=JSON.parse(xhttp.responseText);
-			if(res.status==1){
+			if(res.status=="Success"){
 				$("#timer3G").timer({format: '%M:%S' });
 				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
