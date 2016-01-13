@@ -59,7 +59,9 @@ a{text-decoration:none;}
 	font-family: 'vodaofoneregular';
 	font-size:50px;
 }
-
+#cpanelpage,#downloadspage,#summarypage,#youtubepage{
+	background:white;
+}
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
