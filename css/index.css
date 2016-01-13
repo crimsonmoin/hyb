@@ -293,6 +293,7 @@ h1 {
 .appblk{
 	background:white;
 	border-radius:2px;
+	border:1px solid #eee;
 	margin:20px;
 	float:left;
 	width:90%;
@@ -322,7 +323,7 @@ h1 {
 	font-size:30px;
 	font-family:'robotolight';
 }
-.appdetail .ui-btn{
+.appdetail .ui-btn,.appdetail .ui-btn:hover{
 	background-color:#689F38;
 	color:white;
 }
