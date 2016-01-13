@@ -296,6 +296,7 @@ h1 {
 	margin:20px;
 	float:left;
 	width:90%;
+	position:relative;
 }
 .appicon{
 	float:left;
@@ -305,11 +306,10 @@ h1 {
 	float:left;
 	width:60%;
 	padding:40px;
-	position:relative;
 }
 .appicon>img{
-	height:250px;
-	width:250px;
+	height:200px;
+	width:200px;
 }
 .appdetail h2{
 	font-family:'roboto';
@@ -319,4 +319,8 @@ h1 {
 	position:absolute;
 	right:40px;
 	bottom:40px;
+	font-size:30px;
+	font-family:'robotolight';
+	background:#689F38;
+	color:white;
 }
