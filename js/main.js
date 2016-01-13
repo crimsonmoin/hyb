@@ -147,16 +147,11 @@ $(document).on("pageshow","#summarypage",function(){
               }
 	};
 	function clearTimers(){
-		/*if(typeof(Worker) !== "undefined") {
-			clearWorker = new Worker("js/timerclear.js");
-			clearWorker.onmessage = function(event) {
-			 console.log('started');
-			};
-		}*/
-		/*if(typeof(clearWorker)!="undefined"){
-		clearWorker.terminate();
-		clearWorker=undefined;
-		}*/
+		if(navigator.connection.type==0||navigator.connection.type=='none')
+		{
+			alert('No internet connection detected');
+		}
+		else{
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -172,6 +167,7 @@ $(document).on("pageshow","#summarypage",function(){
 	};
 	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
 	xhttp.send();
+		}
 	};
 	clearTimers();	
 });
