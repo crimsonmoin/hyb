@@ -122,16 +122,7 @@ $(document).on("pageshow","#summarypage",function(){
                  longpollerWorker.onerror = workerErrorReceiver;    
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
-					 if(data.device1==1&&data.device2==1){$(".back").show();}
-						/*if(data.device1==0&&data.device2==0){
-							$(".back").hide();
-							$("#timer3G").timer({
-							format: '%M:%S'  
-							});
-							$('#timer4G').timer({
-							format: '%M:%S'  
-							});
-						}*/
+						if(data.device1==1&&data.device2==1){$(".back").show();}
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
                  }
@@ -158,14 +149,17 @@ $(document).on("pageshow","#summarypage",function(){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			alert(res);
 			var res=JSON.parse(xhttp.responseText);
-			if(res.status=="Success"&&res.device1==0&&res.device2==0){
+			if(res.status=="Success"){
+				if(res.device1==0&&res.device2==0){
 				$("#timer3G").timer({format: '%M:%S' });
 				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
+				}
 			}
 		}
-		else{alert('Failed to trigger operation');}
+		if(xhttp.status == 204){alert('Failed to trigger operation');}
 	};
 	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
 	xhttp.send();
