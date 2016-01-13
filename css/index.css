@@ -323,12 +323,13 @@ h1 {
 	color:#333;
 }
 
-.appdetail button{
+.appdetail a{
 	position:absolute;
 	right:40px;
 	bottom:10px;
 	font-size:30px;
 	font-family:'robotolight';
+	z-index:10000;
 }
 .appdetail .ui-btn,.appdetail .ui-btn:hover{
 	background-color:#689F38;
