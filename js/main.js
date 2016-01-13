@@ -92,21 +92,7 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  e.preventDefault();
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
-	  /*var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-				var data=JSON.parse(xhttp.responseText);
-					if(data.status==1){
-						window.location.href="#summarypage"; 
-					}
-					else{
-						alert('Failed to connect');
-					}
-			}
-		  };
-		  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=Operation&id="+id+"&op="+operation, true);
-		  xhttp.send();*/
-		  window.location.href="#summarypage"; 
+	  window.location.href="#summarypage"; 
 	});
 });
 $(document).on("pagecreate","#youtubepage",function(){
