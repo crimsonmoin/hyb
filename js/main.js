@@ -161,9 +161,9 @@ $(document).on("pageshow","#summarypage",function(){
 				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
 			}
-			else{alert('Failed to trigger operation');}
+			else{alert('Failed to trigger operation');$(".back").show();}
 		}
-		if(xhttp.status == 204){alert('Failed to trigger operation');}
+		if(xhttp.status == 204){alert('Failed to trigger operation');$(".back").show();}
 	};
 	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
 	xhttp.send();
