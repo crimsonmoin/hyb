@@ -107,10 +107,6 @@ $(document).on("pageshow","#summarypage",function(){
 	$("#timer4G").timer('remove');
 	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size : "+MasterData[op].size);
 	$(".back").hide();
-	/*if(typeof(clearWorker)!="undefined"){
-		clearWorker.terminate();
-		clearWorker=undefined;
-	}*/
 	if(typeof(longpollerWorker)!="undefined"){
 		longpollerWorker.terminate();
 		longpollerWorker=undefined;
@@ -154,6 +150,10 @@ $(document).on("pageshow","#summarypage",function(){
 			clearWorker.onmessage = function(event) {
 			 console.log('started');
 			};
+		}*/
+		/*if(typeof(clearWorker)!="undefined"){
+		clearWorker.terminate();
+		clearWorker=undefined;
 		}*/
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
