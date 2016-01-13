@@ -32,6 +32,14 @@
     font-family: 'timer';
     src: url('../img/digital-7_1.ttf');
 }
+@font-face {
+    font-family: 'roboto';
+    src: url('../img/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('../img/Roboto-Light.ttf');
+}
 
 html, body {
     height:100%;
@@ -297,4 +305,12 @@ h1 {
 	float:left;
 	width:70%;
 	padding:40px;
+}
+.appicon>img{
+	height:250px;
+	width:250px;
+}
+.appdetail h2{
+	font-family:'roboto';
+	font-size:80px;
 }
