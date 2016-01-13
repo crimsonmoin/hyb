@@ -22,7 +22,15 @@ $(document).on("pagecreate","#connectpage",function(){
 	  id=$("#txtid").val();
 	  if(id==""){alert('Please enter store id.');}
 	  else{
-		window.location.href="#mainpage";
+		  var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+				window.location.href="#mainpage";
+			}
+			if(xhttp.status == 204){alert('Store id is invalid');}
+		};
+		xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=GetTime&id="+d, true);
+		xhttp.send();
 		}
   });    
 });
