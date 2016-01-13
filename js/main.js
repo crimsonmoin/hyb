@@ -88,7 +88,8 @@ $(document).on("pagecreate","#downloadspage",function(){
 	  $(".ppt").hide();
 	  $(".image").hide();
   });
-  $(".thumper a").click(function(){
+  $(".thumper a").click(function(e){
+	  e.preventDefault();
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
 	  /*var xhttp = new XMLHttpRequest();
@@ -109,14 +110,16 @@ $(document).on("pagecreate","#downloadspage",function(){
 	});
 });
 $(document).on("pagecreate","#youtubepage",function(){
-	$(".thumper a").click(function(){
+	$(".thumper a").click(function(e){
+		e.preventDefault();
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
 	  window.location.href="#summarypage"; 
 	});
 });
 $(document).on("pagecreate","#apppage",function(){
-	$(".appdetail button").click(function(){
+	$(".appdetail button").click(function(e){
+		e.preventDefault();
 	  op=parseInt($(this).attr("data-op"));
 	  operation=$(this).attr("title");
 	  window.location.href="#summarypage"; 
