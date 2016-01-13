@@ -294,18 +294,18 @@ h1 {
 	background:white;
 	border-radius:2px;
 	border:1px solid #eee;
-	margin:20px;
+	margin:20px 20px 0 20px;
 	float:left;
 	width:90%;
 	position:relative;
 }
 .appicon{
 	float:left;
-	width:30%;
+	width:25%;
 }
 .appdetail{
 	float:left;
-	width:60%;
+	width:65%;
 	padding-top:20px;
 }
 .appicon>img{
@@ -315,6 +315,7 @@ h1 {
 .appdetail h2{
 	font-family:'roboto';
 	font-size:60px;
+	color:#333;
 }
 .appdetail button{
 	position:absolute;
