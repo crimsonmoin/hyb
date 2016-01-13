@@ -17,7 +17,7 @@ $(document).on("pagecreate","#connectpage",function(){
 	  if(id==""){alert('Please enter store id.');}
 	  else{
 		 if(typeof(Storage) !== "undefined") {
-			localStorage.id=id;
+			sessionStorage.id=id;
 			window.location.href="#mainpage";
 			}
 		else{alert('local storage not supported');}
@@ -121,6 +121,7 @@ $(document).on("pageshow","#summarypage",function(){
                  longpollerWorker = new Worker("js/longpolling.js");
                  //Call Back Function for Success
                  longpollerWorker.onmessage = workerResultReceiver;
+				 // send message to web worker
                  //Call Back function if some error occurred
                  longpollerWorker.onerror = workerErrorReceiver;    
                  function workerResultReceiver(e) {
@@ -138,6 +139,7 @@ $(document).on("pageshow","#summarypage",function(){
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
                  }
+				 longpollerWorker.postMessage(id);
                  function workerErrorReceiver(e) {
                      console.log("there was a problem with the WebWorker within " + e);
                  }
