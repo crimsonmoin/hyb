@@ -239,7 +239,7 @@ h1 {
 .back{
 	position:fixed;
 	bottom:30px;
-	left:20%;
+	left:15%;
 	z-index:9999;
 	font-size:80px;
 }
@@ -317,6 +317,12 @@ h1 {
 	font-size:60px;
 	color:#333;
 }
+.appdetail p{
+	font-family:'robotolight';
+	font-size:30px;
+	color:#333;
+}
+
 .appdetail button{
 	position:absolute;
 	right:40px;
