@@ -130,7 +130,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 #mainpage{
-	background: url('../img/1.jpg') no-repeat center center fixed; 
+	background: white url('../img/1.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -140,7 +140,7 @@ h1 {
 	float:left;
 	width:40%;
 	height:100vh;
-	background: url('../img/21.jpg') no-repeat center center fixed; 
+	background: white url('../img/21.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -271,10 +271,16 @@ h1 {
 #youtubepage .rsidecontainer>.container{
 	border-bottom:2px solid #eee;
 	text-align:center;
-	margin-top:20%;
+	margin-top:10%;
+}
+#youtubepage .rsidecontainer>.container>img{
+	width:300px;
+	height:300px;
+	margin-bottom:50px;
 }
 #summarypage .rsidecontainer>.container .col2{
 	text-align:center;
+	margin-top:50px;
 }
 .circle{
 	text-align:center;
