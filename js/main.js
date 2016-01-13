@@ -42,7 +42,7 @@ $(document).on("pagecreate","#mainpage",function(){
 $(document).on("pagecreate","#cpanelpage",function(){			  
   $(".icon-1").on("click",function(e){
 	  e.preventDefault();
-	  console.log('1');
+	  window.location.href="#youtubepage";
   });    
   $(".icon-2").on("click",function(e){
 	  console.log('2');
