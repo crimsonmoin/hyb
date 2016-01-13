@@ -22,11 +22,7 @@ $(document).on("pagecreate","#connectpage",function(){
 	  id=$("#txtid").val();
 	  if(id==""){alert('Please enter store id.');}
 	  else{
-		 if(typeof(Storage) !== "undefined") {
-			sessionStorage.id=id;
-			window.location.href="#mainpage";
-			}
-		else{alert('local storage not supported');}
+		window.location.href="#mainpage";
 		}
   });    
 });
