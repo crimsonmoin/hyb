@@ -1,3 +1,4 @@
+var uri="http://testapi.moinwebdev.com/rest/api.php?request=";
 var clearWorker;
 var longpollerWorker;
 var operation="";
@@ -13,8 +14,8 @@ var MasterData=[
 {'type':'App','size':'45mb','op':'download'},
 {'type':'App','size':'20mb','op':'download'},
 {'type':'App','size':'11mb','op':'download'},
-{'type':'YouTube','size':'0mb','op':'streaming'},
-{'type':'YouTube','size':'0mb','op':'streaming'},
+{'type':'YouTube','size':'-mb','op':'streaming'},
+{'type':'YouTube','size':'-mb','op':'streaming'},
 ];
 var op=0;
 $(document).on("pagecreate","#connectpage",function(){
@@ -29,7 +30,7 @@ $(document).on("pagecreate","#connectpage",function(){
 				}
 				if(xhttp.status == 204){alert('Store id is invalid');}
 			}
-		xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=GetTime&id="+id, true);
+		xhttp.open("GET", uri+"GetTime&id="+id, true);
 		xhttp.send();
 		}
   });    
@@ -165,7 +166,7 @@ $(document).on("pageshow","#summarypage",function(){
 		}
 		if(xhttp.status == 204){alert('Failed to trigger operation');$(".back").show();}
 	};
-	xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=clearTimers&id="+id+"&op="+operation, true);
+	xhttp.open("GET", uri+"clearTimers&id="+id+"&op="+operation, true);
 	xhttp.send();
 		}
 	};
