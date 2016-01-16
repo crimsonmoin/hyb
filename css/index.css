@@ -328,7 +328,7 @@ h1 {
 	width: 25%;
     margin: 10px;
 	}
-	#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1{
+	#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1,#cpanelpage .lsidecontainer h1{
 	font-size:50px;
 	}
 }
