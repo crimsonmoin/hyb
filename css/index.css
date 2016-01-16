@@ -377,8 +377,8 @@ h1 {
 	.appdetail{padding-top:5px;}
 	.appdetail a {
 		position: absolute;
-		right: 10px;
+		right: 5px;
 		bottom: 10px;
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
