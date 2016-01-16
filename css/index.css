@@ -384,11 +384,12 @@ h1 {
 	.thumper h2{font-size:20px;}
 	.thumper{border-top:1px solid #eee;}
 	.thumper .col2 img{
-		width:75%;
-		padding:10%;
+		width:70%;
+		padding:0 10%;
 	}
 	#downloadspage .col3{margin:0 15px;}
 	#downloadspage .col3 img{
 		padding:5px 20px;
+		width:80%;
 	}
 }
