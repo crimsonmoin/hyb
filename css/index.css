@@ -316,10 +316,10 @@ h1 {
 	background-color:#689F38;
 	color:white;
 }
+#connectpage .ui-content{padding:1em;}
 .ui-content{padding:0;}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (-webkit-device-pixel-ratio: 1) and (min-width:600px) {
-	
     #connectpage{
 	font-size:20px;
 	}
@@ -332,5 +332,20 @@ h1 {
 	}
 	#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1,#cpanelpage .lsidecontainer h1{
 	font-size:35px;
+	}
+	#youtubepage .rsidecontainer>.container{
+		margin-top:5%;
+	}
+	#youtubepage .rsidecontainer>.container>img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0px;
+	}
+	.col2{
+		margin:10px;
+		width:42%;
+	}
+	.thumper h1{
+		font-size:30px;
 	}
 }
