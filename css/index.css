@@ -381,4 +381,10 @@ h1 {
 		bottom: 10px;
 		font-size: 12px;
 	}
+	.thumper h2{font-size:20px;}
+	.thumper{border-top:1px solid #eee;}
+	.thumper .col2 img{
+		width:75%;
+		padding:10%;
+	}
 }
