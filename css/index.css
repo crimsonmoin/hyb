@@ -365,4 +365,19 @@ h1 {
 	.back>img{
 		max-width:30%;
 	}
+	.appdetail h2{
+	font-size: 30px;
+	}
+	.appdetail p{
+	font-size: 15px;
+	}
+	.appicon>img{width:100%;height:100%;}
+	.featured>img{height:50px;}
+	.appblk{margin:10px;}
+	.appdetail a {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		font-size: 15px;
+	}
 }
