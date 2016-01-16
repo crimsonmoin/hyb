@@ -316,8 +316,8 @@ h1 {
 	background-color:#689F38;
 	color:white;
 }
-#connectpage .ui-content{padding:1em;}
 .ui-content{padding:0;}
+#connectpage .ui-content{padding:1em;}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (-webkit-device-pixel-ratio: 1) and (min-width:600px) {
     #connectpage{
