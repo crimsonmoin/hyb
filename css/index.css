@@ -330,7 +330,7 @@ h1 {
 	width: 25%;
     margin: 15px;
 	}
-	#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1,#cpanelpage .lsidecontainer h1{
+	#downloadspage .lsidecontainer h1,#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1,#cpanelpage .lsidecontainer h1{
 	font-size:35px;
 	}
 	#youtubepage .rsidecontainer>.container{
@@ -366,7 +366,7 @@ h1 {
 		max-width:30%;
 	}
 	.appdetail h2{
-	font-size: 30px;
+	font-size: 25px;
 	}
 	.appdetail p{
 	font-size: 15px;
