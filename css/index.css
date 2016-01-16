@@ -318,6 +318,7 @@ h1 {
 }
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (-webkit-device-pixel-ratio: 1) and (min-width:600px) {
+	.ui-content{padding:0;}
     #connectpage{
 	font-size:20px;
 	}
