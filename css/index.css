@@ -348,4 +348,10 @@ h1 {
 	.thumper h1{
 		font-size:30px;
 	}
+	.col2 img{
+		width:100%;
+	}
+	#youtubepage .rsidecontainer>.container{
+		border: 1px solid #eee;
+	}
 }
