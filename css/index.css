@@ -70,16 +70,6 @@ a{text-decoration:none;}
 #cpanelpage,#downloadspage,#summarypage,#youtubepage{
 	background:white;
 }
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (-webkit-device-pixel-ratio: 1) and (min-width:600px) {
-    #connectpage{
-	font-size:20px;
-	}
-	#connectpage label,#connectpage input,#connectpage button{
-	font-size:20px;
-	}
-}
-
 h1 {
     font-size:40px;
     font-weight:normal;
@@ -325,4 +315,20 @@ h1 {
 .appdetail .ui-btn,.appdetail .ui-btn:hover{
 	background-color:#689F38;
 	color:white;
+}
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (-webkit-device-pixel-ratio: 1) and (min-width:600px) {
+    #connectpage{
+	font-size:20px;
+	}
+	#connectpage label,#connectpage input,#connectpage button{
+	font-size:20px;
+	}
+	.col3{
+	width: 25%;
+    margin: 10px;
+	}
+	#summarypage .lsidecontainer h1,#youtubepage .lsidecontainer h1,#apppage .lsidecontainer h1,#cpanelpage h1{
+	font-size:50px;
+	}
 }
