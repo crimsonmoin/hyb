@@ -349,9 +349,20 @@ h1 {
 		font-size:30px;
 	}
 	.col2 img{
-		width:100%;
+		width:90%;
+		padding:5%;
 	}
 	#youtubepage .rsidecontainer>.container{
-		border: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	.back{
+	position:fixed;
+	bottom:10px;
+	left:15%;
+	z-index:9999;
+	font-size:30px;
+	}
+	.back>img{
+		max-width:30%;
 	}
 }
