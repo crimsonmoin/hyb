@@ -392,4 +392,15 @@ h1 {
 		padding:10px 20px;
 		width:80%;
 	}
+	#timer3G,#timer4G{
+	font-size:100px;
+	margin-top:60px;
+	}
+	.circle{
+	width:250px;
+	height:250px;
+	}
+	#summarypage .col2 img{
+		width:70%;
+	}
 }
