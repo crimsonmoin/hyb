@@ -393,14 +393,20 @@ h1 {
 		width:80%;
 	}
 	#timer3G,#timer4G{
-	font-size:100px;
-	margin-top:60px;
+	font-size:90px;
+	margin-top:40px;
 	}
 	.circle{
 	width:250px;
 	height:250px;
 	}
 	#summarypage .col2 img{
-		width:70%;
+		width:50%;
+	}
+	#summarypage .rsidecontainer>.container .col2{
+		margin-top: 30px;
+	}
+	#summarypage .rsidecontainer>.container{
+		margin-top:0px;
 	}
 }
