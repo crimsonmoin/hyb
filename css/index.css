@@ -409,4 +409,7 @@ h1 {
 	#summarypage .rsidecontainer>.container{
 		margin-top:0px;
 	}
+	#summarypage .lsidecontainer h1{
+		margin-left:10px;
+	}
 }
