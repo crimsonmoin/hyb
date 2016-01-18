@@ -10,7 +10,7 @@ idleWait = 15000;
             idleTimer = setTimeout(function () { 
 			var str=window.location.href;
 			var res = str.split("#");
-			alert(res[1]);
+			//alert(res[1]);
 			if(res[1]!="summarypage")
 			{window.location.href="#mainpage";}
                 idleState = true; }, idleWait);

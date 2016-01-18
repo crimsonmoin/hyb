@@ -137,12 +137,12 @@ $(document).on("pageshow","#summarypage",function(){
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
 						if(data.device1==1&&data.device2==1){
-							$('#timer4G').timer('pause');
-							$('#timer3G').timer('pause');
+							/*$('#timer4G').timer('pause');
+							$('#timer3G').timer('pause');*/
 							$(".back").show();
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
-							idleTimer();
+							//idleTimer();
 						}
                  }
 				 longpollerWorker.postMessage(id);
