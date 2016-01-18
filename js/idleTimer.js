@@ -12,11 +12,6 @@ idleWait = 15000;
 			//alert(res[1]);
 			if(res[1]!="summarypage"||res[1]!="mainpage")
 			{window.location.href="#mainpage";}
-			else if(res[1]=="summarypage"){
-				if($(".summaryback").is(":visible")){
-					window.location.href="#mainpage";
-					}
-			}
                 idleState = true; }, idleWait);
         });
         $("body").trigger("mousemove");
