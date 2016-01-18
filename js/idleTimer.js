@@ -1,3 +1,4 @@
+function idleTimer(){
 idleTimer = null;
 idleState = false;
 idleWait = 15000;
@@ -7,7 +8,7 @@ idleWait = 15000;
             clearTimeout(idleTimer);            
             idleState = false;
             idleTimer = setTimeout(function () { 
-			var url=window.location.href;
+			var str=window.location.href;
 			var res = str.split("#");
 			alert(res[1]);
 			if(res[1]!="summarypage")
@@ -17,3 +18,5 @@ idleWait = 15000;
         $("body").trigger("mousemove");
     });
 }) (jQuery)
+};
+idleTimer();
