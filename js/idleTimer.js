@@ -13,7 +13,7 @@ idleWait = 15000;
 			if(res[1]!="summarypage"||res[1]!="mainpage")
 			{window.location.href="#mainpage";}
 			else if(res[1]=="summarypage"){
-				if($(".back").is(":visible")){
+				if ( $(".summaryback").css('display')!= 'none' ){
 					window.location.href="#mainpage";
 					}
 			}
