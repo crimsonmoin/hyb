@@ -1,4 +1,4 @@
-function idleTimer(){
+function idler(){
 idleTimer = null;
 idleState = false;
 idleWait = 15000;
@@ -19,4 +19,4 @@ idleWait = 15000;
     });
 }) (jQuery)
 };
-idleTimer();
+idler();
