@@ -134,14 +134,16 @@ $(document).on("pageshow","#summarypage",function(){
                  longpollerWorker.onerror = workerErrorReceiver;    
                  function workerResultReceiver(e) {
                      var data=JSON.parse(e.data);
+						if(data.device2==1){$('#timer4G').timer('pause');}
+						if(data.device1==1){$('#timer3G').timer('pause');}
 						if(data.device1==1&&data.device2==1){
+							$('#timer4G').timer('pause');
+							$('#timer3G').timer('pause');
 							$(".back").show();
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
 							idleTimer();
 						}
-						if(data.device2==1){$('#timer4G').timer('pause');}
-						if(data.device1==1){$('#timer3G').timer('pause');}
                  }
 				 longpollerWorker.postMessage(id);
                  function workerErrorReceiver(e) {
