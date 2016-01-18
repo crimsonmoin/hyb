@@ -7,8 +7,10 @@ idleWait = 15000;
             clearTimeout(idleTimer);            
             idleState = false;
             idleTimer = setTimeout(function () { 
-			alert(window.location.href);
-			if(window.location.href!="#summarypage")
+			var url=window.location.href;
+			var res = str.split("#");
+			alert(res);
+			if(res!="summarypage")
 			{window.location.href="#mainpage";}
                 idleState = true; }, idleWait);
         });
