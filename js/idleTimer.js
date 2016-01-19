@@ -1,7 +1,7 @@
 function idler(){
 idleTimer = null;
 idleState = false;
-idleWait = 15000;
+idleWait = 20000;
 (function ($) { 
         $('*').bind('mousemove keydown scroll', function () {
             clearTimeout(idleTimer);            

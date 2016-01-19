@@ -140,8 +140,8 @@ $(document).on("pageshow","#summarypage",function(){
 							$(".back").show();
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
-							setTimeout(function () { 
-							window.location.href="#mainpage";}, 15000);
+							setTimeout(function () {
+							window.location.href="#mainpage";}, 25000);
 						}
                  }
 				 longpollerWorker.postMessage(id);
