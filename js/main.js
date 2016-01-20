@@ -164,10 +164,8 @@ $(document).on("pageshow","#summarypage",function(){
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			var res=JSON.parse(xhttp.responseText);
 			if(res.status=="Success"&&res.device1==0&&res.device2==0){
-				/*$("#timer3G").timer({format: '%M:%S' });
-				$("#timer4G").timer({format: '%M:%S' });*/
-				$("#timer3G").timer();
-				$("#timer4G").timer();
+				$("#timer3G").timer({format: '%M:%S' });
+				$("#timer4G").timer({format: '%M:%S' });
 				longPoller();
 			}
 			else{alert('Failed to trigger operation');$(".back").show();}
