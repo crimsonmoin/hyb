@@ -123,6 +123,12 @@ $(document).on("pageshow","#summarypage",function(){
 		longpollerWorker.terminate();
 		longpollerWorker=undefined;
 	}
+	var myVar;
+	$(".summaryback").on("click",function(e){
+	  e.preventDefault();
+	  clearTimeout(myVar);
+	  window.location.href="#cpanelpage";
+	});
 	function longPoller(){
 		if (typeof (Worker) !== "undefined") {
                  //Creating Worker Object
@@ -140,7 +146,7 @@ $(document).on("pageshow","#summarypage",function(){
 							$(".back").show();
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
-							setTimeout(function () {
+							myVar = setTimeout(function () {
 							window.location.href="#mainpage";}, 25000);
 						}
                  }
