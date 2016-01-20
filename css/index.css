@@ -206,7 +206,7 @@ h1 {
 #timer3G,#timer4G{
 	font-size:200px;
 	font-family:'timer';
-	color:rgb(233,0,0);
+	color:rgb(230,30,37);
 	margin-top:120px;
 }
 .clear{
@@ -235,13 +235,13 @@ h1 {
 }
 .thumper h1{
 	text-align:center;
-	color:rgb(233,0,0);
+	color:rgb(230,30,37);
 	font-family: 'vodafonebold';
 	font-size:80px;
 }
 .thumper h2{
 	text-align:center;
-	color:rgb(233,0,0);
+	color:rgb(230,30,37);
 	font-family: 'vodaofoneregular';
 	font-size:60px;
 }
@@ -267,7 +267,7 @@ h1 {
 .circle{
 	text-align:center;
 	border-radius:50%;
-	border:5px solid rgb(233,0,0);
+	border:5px solid rgb(230,30,37);
 	width:500px;
 	height:500px;
 }
