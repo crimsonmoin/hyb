@@ -12,8 +12,8 @@ var MasterData=[
 {'type':'Video','size':'1mb','op':'download'},
 {'type':'App','size':'12mb','op':'download'},
 {'type':'App','size':'45mb','op':'download'},
-{'type':'App','size':'20mb','op':'download'},
 {'type':'App','size':'11mb','op':'download'},
+{'type':'App','size':'7mb','op':'download'},
 {'type':'YouTube','size':'-mb','op':'streaming'},
 {'type':'YouTube','size':'-mb','op':'streaming'},
 ];
@@ -164,8 +164,10 @@ $(document).on("pageshow","#summarypage",function(){
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			var res=JSON.parse(xhttp.responseText);
 			if(res.status=="Success"&&res.device1==0&&res.device2==0){
-				$("#timer3G").timer({format: '%M:%S' });
-				$("#timer4G").timer({format: '%M:%S' });
+				/*$("#timer3G").timer({format: '%M:%S' });
+				$("#timer4G").timer({format: '%M:%S' });*/
+				$("#timer3G").timer();
+				$("#timer4G").timer();
 				longPoller();
 			}
 			else{alert('Failed to trigger operation');$(".back").show();}
