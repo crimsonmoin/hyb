@@ -33,7 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('ready');
+        window.plugins.insomnia.keepAwake();
 		document.addEventListener("backbutton", function (e) {
 		e.preventDefault();
 		}, false);
