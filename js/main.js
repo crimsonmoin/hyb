@@ -147,7 +147,7 @@ $(document).on("pageshow","#summarypage",function(){
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
 							myVar = setTimeout(function () {
-							window.location.href="#mainpage";}, 25000);
+							window.location.href="#mainpage";}, 20000);
 						}
                  }
 				 longpollerWorker.postMessage(id);
