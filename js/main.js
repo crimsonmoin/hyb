@@ -1,4 +1,4 @@
-var uri="http://testapi.moinwebdev.com/rest/api.php?request=";
+var uri="http://api1.moinwebdev.com/rest/api.php?request=";
 var clearWorker;
 var longpollerWorker;
 var operation="";

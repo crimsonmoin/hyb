@@ -9,7 +9,7 @@ function loadDoc() {
 		postMessage(xhttp.responseText);
     }
   };
-  xhttp.open("GET", "http://testapi.moinwebdev.com/rest/api.php?request=GetTime&id="+d, true);
+  xhttp.open("GET", "http://api1.moinwebdev.com/rest/api.php?request=GetTime&id="+d, true);
   xhttp.send();
 };
 setInterval(function(){ loadDoc(); }, 1500);
