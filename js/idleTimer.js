@@ -10,7 +10,7 @@ idleWait = 20000;
 			var str=window.location.href;
 			var res = str.split("#");
 			//alert(res[1]);
-			if(res[1]!="summarypage"&&res[1]!="mainpage")
+			if(res[1]!="summarypage"&&res[1]!="mainpage"&&res[1]!="connectpage")
 			{window.location.href="#mainpage";}
                 idleState = true; }, idleWait);
         });
