@@ -1,4 +1,4 @@
-var uri="http://api1.moinwebdev.com/rest/api.php?request=";
+var uri="http://api2.valleyretail.in/rest/api.php?request=";
 var clearWorker;
 var longpollerWorker;
 var operation="";
@@ -11,7 +11,7 @@ var MasterData=[
 {'type':'Video','size':'3mb','op':'download'},
 {'type':'Video','size':'1mb','op':'download'},
 {'type':'App','size':'12mb','op':'download'},
-{'type':'App','size':'45mb','op':'download'},
+{'type':'App','size':'26mb','op':'download'},
 {'type':'App','size':'11mb','op':'download'},
 {'type':'App','size':'7mb','op':'download'},
 {'type':'YouTube','size':'-mb','op':'streaming'},
@@ -30,7 +30,7 @@ $(document).on("pagecreate","#connectpage",function(){
 				}
 				if(xhttp.status == 204){alert('Store id is invalid');}
 			}
-		xhttp.open("GET", uri+"GetTime&id="+id, true);
+		xhttp.open("GET", uri+"GetTimer&id="+id, true);
 		xhttp.send();
 		}
   });    
