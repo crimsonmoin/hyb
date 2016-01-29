@@ -142,14 +142,14 @@ $(document).on("pageshow","#summarypage",function(){
                      var data=JSON.parse(e.data);
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
-						if(data.device1==1&&data.device2==1){
-							$('#timer4G').timer('pause');
-							$('#timer3G').timer('pause');
+						if(data.device1==1||data.device2==1){
 							$(".back").show();
+						}
+						if(data.device1==1&&data.device2==1){							
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
 							myVar = setTimeout(function () {
-							window.location.href="#mainpage";}, 20000);
+							window.location.href="#mainpage";}, 25000);
 						}
                  }
 				 longpollerWorker.postMessage(id);
