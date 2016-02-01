@@ -6,8 +6,8 @@ var id=0;
 var MasterData=[
 {'type':'PPT','size':'4mb','op':'upload'},
 {'type':'PPT','size':'2mb','op':'upload'},
-{'type':'Image','size':'21mb','op':'download'},
-{'type':'Image','size':'12mb','op':'download'},
+{'type':'Image','size':'9mb','op':'download'},
+{'type':'Image','size':'6mb','op':'download'},
 {'type':'Video','size':'3mb','op':'download'},
 {'type':'Video','size':'1mb','op':'download'},
 {'type':'App','size':'12mb','op':'download'},
@@ -117,7 +117,7 @@ $(document).on("pageshow","#summarypage",function(){
 	$("#timer4G").timer();
 	$("#timer3G").timer('remove');
 	$("#timer4G").timer('remove');
-	$("#summarypage h1").html('Test Perform<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size : "+MasterData[op].size);
+	$("#summarypage h1").html('Test Performed<br/>'+MasterData[op].type+" "+MasterData[op].op+"<br/>"+"File Size : "+MasterData[op].size);
 	$(".back").hide();
 	if(typeof(longpollerWorker)!="undefined"){
 		longpollerWorker.terminate();
@@ -142,12 +142,13 @@ $(document).on("pageshow","#summarypage",function(){
                      var data=JSON.parse(e.data);
 						if(data.device2==1){$('#timer4G').timer('pause');}
 						if(data.device1==1){$('#timer3G').timer('pause');}
-						if(data.device1==1||data.device2==1){
+						/*if(data.device1==1||data.device2==1){
 							$(".back").show();
-						}
+						}*/
 						if(data.device1==1&&data.device2==1){							
 							longpollerWorker.terminate();
 							longpollerWorker=undefined;
+							$(".back").show();
 							myVar = setTimeout(function () {
 							window.location.href="#mainpage";}, 25000);
 						}
